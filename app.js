@@ -128,6 +128,15 @@ Test this function by hand in the console to get it working, and when you think 
 let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+  let length= dynamicArray.length;
+  let result ;
+  if(length<=1){
+     result= dynamicArray[0];
+  }else if(length==2){
+    result= multiply(dynamicArray[0],dynamicArray[1])
+    result=result[0];
+    ;
+  }else{
   let y =multiply(dynamicArray[0],dynamicArray[1]);
   let x= [y[0]];
   let z;
@@ -136,8 +145,11 @@ function multiplyAnyArray(dynamicArray) { //eslint-disable-line
     x.push(z[0]);
 
   }
+  result = x[x.length-3];
+}
+console.log(result);
 
-return [x[x.length-3],`The numbers ${dynamicArray[0]},${dynamicArray[1]},${dynamicArray[2]},${dynamicArray[3]},${dynamicArray[4]} have a product of ${x[x.length-3]}.`]
+return [result,`The numbers ${dynamicArray[0]},${dynamicArray[1]},${dynamicArray[2]},${dynamicArray[3]},${dynamicArray[4]} have a product of ${result}.`]
 
   }
 
