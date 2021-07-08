@@ -111,11 +111,21 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
+  let firstN , secondN , thirdN
+  firstN =  multArr[0];
+  secondN = multArr[1];
+  thirdN =  multArr[2];
+  let multofFirst = multiply(firstN,secondN)[0];
+  let mulofThird = multiply(multofFirst,thirdN)[0];
+  let SecondElement = `The numbers ${firstN},${secondN},${thirdN} have a product of ${mulofThird}.`
+  let array = [mulofThird,SecondElement]
+  return array
 
 }
 
+
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+ testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
