@@ -81,10 +81,11 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(sumArr) { 
+function sumArray(sumArr) {
+   
 
-  let sum2=sum(testArray[0],testArray[1])[0];
-  sum2=sum(sum2,testArray[2])[0];
+  let sum2=sum(  testArray[0],  testArray[1]) [0] ;
+  sum2=sum(  sum2,  testArray[2])[0];
 
   return[sum2,"2,3,4 was passed in as an array of numbers, and 9 is their sum."]
 }
@@ -107,14 +108,14 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-// let multiArray=[2,3,4];
+let multiArray=[2,3,4];
 
 function multiplyArray(multArr) { 
-//   let multiply2=multiply(multiArray[0],multiArray[1])[0];
-//   multiply2=multiply(multiply2,multiArray[2])[0];
-//   return[multiply2,"The numbers 2,3,4 have a product of 24."]
-// }
-// testMultiplyArray(2,3,4);
+  let multiply2=multiply(multiArray[0],multiArray[1])[0];
+  multiply2=multiply(multiply2,multiArray[2])[0];
+  return[multiply2,"The numbers 2,3,4 have a product of 24."]
+}
+testMultiplyArray(2,3,4);
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(testArray);
