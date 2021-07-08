@@ -55,7 +55,7 @@ testMultiply(5,9);
 function sumAndMultiply(a, b, c) { //eslint-disable-line
   let s = sum(sum(a, b)[0], c)[0];
   let p = multiply(multiply(a, b)[0], c)[0];
-  return [s,p,`${a} and ${b} and ${c} sum to 16.`,`The product of 4 and 7 and 5 is 140.`]
+  return [s,p,`${a} and ${b} and ${c} sum to ${s}.`,`The product of ${a} and ${b} and ${c} is ${p}.`]
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -74,14 +74,23 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
+// let sumArr=[2,3,4];
+function sumArray(sumArr) {
+   //eslint-disable-line
+   
+  let total =sum(sum(testArray[0],testArray[1])[0],testArray[2])[0];
 
-function sumArray(sumArr) { //eslint-disable-line
+  //  let s=0;
+  //  for (let i = 0; i < testArray.length; i++) {
+  //     s = s +  testArray[i]  ;
+  //  }
+   return [total,`${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${total} is their sum.`]
 
 }
-
+sumArray();
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
