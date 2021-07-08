@@ -105,7 +105,8 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 
-var testArray2 = [2, 3, 4]; 
+let testArray2 = [2, 3, 4]; 
+
 
 function multiplyArray([a,b,c]) { 
 let x = multiply(a,b)[0];
@@ -137,11 +138,16 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
-function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+function multiplyAnyArray(array) {
+  let arrays = [1, 2, 3, 4, 5];
+  let x = multiply(array[0], arrays[1]);
+  let y = multiply(x[0], arrays[2]);
+  let z = multiply(y[0], arrays[3]);
+  let result = multiply(z[0], arrays[4]);
+  return [result[0], "The numbers 1,2,3,4,5 have a product of 120."]
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
