@@ -113,15 +113,15 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-// function multiplyArray(multArr) { //eslint-disable-line
-//   let x = multiply(mulArr[0],mulArr[1])[0];
-//   let y = multiply(x,mulArr[2])[0];
-//   return [y , `${mulArr[0]},${mulArr[1]},${mulArr[2]} was passed in as an array of numbers, and ${y} is their sum.`]
+function multiplyArray(mulArr) { //eslint-disable-line
+  let x = multiply(mulArr[0],mulArr[1])[0];
+  let y = multiply(x,mulArr[2])[0];
+  return [y , `The numbers ${mulArr[0]},${mulArr[1]},${mulArr[2]} have a product of ${y}.`]
 
-// }
+}
 
-// // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+// Here is the test for multiplyArray(); uncomment it to run it
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
