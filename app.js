@@ -52,10 +52,10 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 
 function sumAndMultiply(a, b, c) { 
-  var x = sum(a, b)[0];
-  var y = sum(x, c)[0];
-  var z = multiply(a, b)[0];
-  var w = multiply(z, c)[0];
+  let x = sum(a, b)[0];
+  let y = sum(x, c)[0];
+  let z = multiply(a, b)[0];
+  let w = multiply(z, c)[0];
 
   return [y, w, +a + " and " + b + " and " + c + " sum to " + y + ".", "The product of " + a + " and " + b + " and " + c + " is " + w + "."];
 }
@@ -78,9 +78,14 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(sumArr) { //eslint-disable-line
-
+function sumArray([a,b,c]) { //eslint-disable-line
+  let x = sum(a,b)[0];
+  let y = sum(x,c)[0];
+    return [y ,  a + "," + b + "," + c + " was passed in as an array of numbers, and " + y + " is their sum."]
 }
+
+// // // Here is the test for sumArray(); uncomment it to run it
+ testSumArray(testArray);
 
 // Here is the test for sumArray(); uncomment it to run it
 
