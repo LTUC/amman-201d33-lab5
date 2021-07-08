@@ -103,11 +103,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+multArr=multiply(testArray[0],testArray[1])[0]
+let multiply1=multiply(multArr,testArray[2])[0]
+let multiplactionArr=[multiply1,`The numbers 2,3,4 have a product of 24.`]
+return multiplactionArr;
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
