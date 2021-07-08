@@ -123,7 +123,7 @@ function multiplyAnyArray(dynamicArray) { //eslint-disable-line
   for (let i=0 ; i<testDynamicArray.length;i++){
     k=multiply(k,dynamicArray[i])[0];
   }
-  return[k,`The numbers 1,2,3,4,5 have a product of 120.`]
+  return[k,`The numbers ${testDynamicArray} have a product of ${k}.`]
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
