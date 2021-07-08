@@ -108,13 +108,15 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-let multiArray=[2,3,4];
+let multiArray=[2,3,4];  
+
 
 function multiplyArray(multArr) { 
-  let multiply2=multiply(multiArray[0],multiArray[1])[0];
-  multiply2=multiply(multiply2,multiArray[2])[0];
+  let multiply2=multiply(  multiArray[0],  multiArray[1])  [0];
+  multiply2=multiply(  multiply2 ,multiArray[2]) [0];
   return[multiply2,"The numbers 2,3,4 have a product of 24."]
 }
+
 testMultiplyArray(2,3,4);
 
 // Here is the test for multiplyArray(); uncomment it to run it
