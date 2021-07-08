@@ -50,9 +50,18 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sumAndMultiply(a, b, c) { //eslint-disable-line
+function sumAndMultiply(a, b, c) { 
 
+  let total=sum(a,b)[0];
+  total = sum(total,c)[0]
+
+  let product=multiply(a,b)[0];
+  product=multiply(product,c)[0];
+
+  return[total,product, "4 and 7 and 5 sum to 16.","The product of 4 and 7 and 5 is 140." ];
 }
+testSumAndMultiply(4,7,5);
+
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 // testSumAndMultiply(4,7,5);
@@ -72,9 +81,14 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(sumArr) { //eslint-disable-line
+// function sumArray(sumArr) { 
 
-}
+//   let sum2=sum(testArray[0],testArray[1])[0];
+//   sum2=sum(sum2,testArray[2])[0];
+
+//   return[sum2,"2,3,4 was passed in as an array of numbers, and 9 is their sum."]
+// }
+// testSumArray(2,3,4);
 
 // Here is the test for sumArray(); uncomment it to run it
 
@@ -93,9 +107,14 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) { //eslint-disable-line
+// let multiArray=[2,3,4];
 
-}
+function multiplyArray(multArr) { 
+//   let multiply2=multiply(multiArray[0],multiArray[1])[0];
+//   multiply2=multiply(multiply2,multiArray[2])[0];
+//   return[multiply2,"The numbers 2,3,4 have a product of 24."]
+// }
+// testMultiplyArray(2,3,4);
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(testArray);
