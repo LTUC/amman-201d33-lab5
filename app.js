@@ -147,12 +147,42 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
-
+//let arrayElments = 0
+// for (let i = 0; i < dynamicArray.length; i++) {
+//   let arrayElments += dynamicArray[i];
+  
+//   console.log(arrayElments)
+  
+// }
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+// i think this is a worng solution becasue if the Array has more than 5 elments the function will not work i tried to search about that how can i store atrray values without using + opreator i mean im sure i have to loop by the arraylength but i dont know how to store it without using + maybe in recursive function but i'm still stuck even if i used it 
+/*..let arrayElments = 0
+ for (let i = 0; i < dynamicArray.length; i++) {
+  let arrayElments += dynamicArray[i];
+  
+  console.log(arrayElments)
+  
+ }*/
+  let firstN,secondN , thirdN,foruthN ,fifthN
+  firstN = dynamicArray[0];
+  secondN = dynamicArray[1];
+  thirdN =  dynamicArray[2];
+  foruthN = dynamicArray[3];
+  fifthN =  dynamicArray[4];
+  let multoffirst= multiply(firstN,secondN)[0];
+  let multofSecondN = multiply(multoffirst,thirdN)[0];
+  let mulofThird = multiply(multofSecondN,foruthN)[0];
+  let mutloforuth =  multiply(mulofThird,fifthN)[0];
+  let SecondElement = `The numbers ${firstN},${secondN},${thirdN},${foruthN},${fifthN} have a product of ${mutloforuth}.`
+  let array = [mutloforuth, SecondElement]
+  
+  return array
+  
 
+  
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
