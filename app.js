@@ -62,10 +62,10 @@ let resultmulty2 =multiply(resultmulty[0],c)
 return [sumresult2[0],resultmulty2[0],`${a} and ${b} and ${c} sum to ${sumresult2[0]}.`,`The product of ${a} and ${b} and ${c} is ${resultmulty2[0]}.`]
 
 }
-console.log(sumAndMultiply(4, 7, 5)[0]);
-// console.log(sumAndMultiply(4, 7, 5)[1]);
-// console.log(sumAndMultiply(4, 7, 5)[2]);
-console.log(sumAndMultiply(4, 7, 5)[3]);
+// console.log(sumAndMultiply(4, 7, 5)[0]);
+// // console.log(sumAndMultiply(4, 7, 5)[1]);
+// // console.log(sumAndMultiply(4, 7, 5)[2]);
+// console.log(sumAndMultiply(4, 7, 5)[3]);
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 testSumAndMultiply(4,7,5);
@@ -86,12 +86,16 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+let arryresult=sum(testArray[0],testArray[1])
+let arryresult2=sum(arryresult[0],testArray[2]) 
+return[arryresult2[0],`2,3,4 was passed in as an array of numbers, and 9 is their sum.`]
 }
 
 // Here is the test for sumArray(); uncomment it to run it
+console.log(sumArray(testArray)[0]);
+console.log(sumArray(testArray)[1]);
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
