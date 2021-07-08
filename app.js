@@ -8,8 +8,8 @@ Write a function called sum() that takes in two numbers as arguments and then re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
-function sum(a,b,c) { //eslint-disable-line
-  let result=a+b+c;
+function sum(a,b) { //eslint-disable-line
+  let result=a+b;
   return [result,`The sum of ${a} and ${b} is ${result}.`]
 }
 
@@ -28,8 +28,8 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function multiply(a, b,c) { //eslint-disable-line
-  let result=a*b*c;
+function multiply(a, b) { //eslint-disable-line
+  let result=a*b;
   return [result,`The product of ${a} and ${b} is ${result}.`]
 }
 
@@ -51,7 +51,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b,c) { //eslint-disable-line
-let result1=sum(4,7,5);
+let result1=sum(4,7);
 let result2=multiply(4,7,5);
   return [sum(4,7,5)[0],multiply(4,7,5)[0],`4 and 7 and 5 sum to ${sum(4,7,5)[0]}.`,`The product of 4 and 7 and 5 is ${multiply(4,7,5)[0]}.`]
 }
