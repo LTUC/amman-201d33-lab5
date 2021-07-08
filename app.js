@@ -50,8 +50,17 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
+problem3
 
 function sumAndMultiply(a, b, c) {
+
+let result2;
+function sumAndMultiply(a, b, c){ 
+let result=sum(sum(a,b)[0],c)[0];
+result2=multiply(multiply(a,b)[0],c)[0];
+  return [result,result2,`The product of ${a} and ${b} and ${c} is ${result}.`]
+  
+ main
   //eslint-disable-line
   let result=sum(a,b,c)[0];
   result=sum(result,c)[0];
@@ -78,16 +87,29 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
-
-function sumArray(sumArr) { //eslint-disable-line
-
+let result3;
+function sumArray(sumArr) { 
+  let result=sumArr[0];
+  for (let i=1; i<sumArr.length ; i++)
+  result=sum(result,sumArr[i])[0];
+  
+  
+  return[result,`${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${result} is their sum.`]
+  //eslint-disable-line
 }
+testSumArray(testArray);
+
 
 // Here is the test for sumArray(); uncomment it to run it
 
 // testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
+
+
+
+
+
 
 /////////////////////////////////////
 /* Problem 5
@@ -100,9 +122,14 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
+let result5;
 function multiplyArray(multArr) { //eslint-disable-line
-
+result5=multArr[0];
+for (let j=1; j<multArr.length ; j++)
+result5=multiply(result5,multArr[j])[0];
+  return[result5,`The numbers ${multArr} have a product of ${result5}.`]
 }
+testMultiplyArray(testArray);
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(testArray);
