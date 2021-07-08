@@ -8,14 +8,14 @@ Write a function called sum() that takes in two numbers as arguments and then re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
-function sum(a,b,c) { //eslint-disable-line
-  let result=a+b+c;
+function sum(a,b) { //eslint-disable-line
+  let result=a+b;
   return [result,`The sum of ${a} and ${b} is ${result}.`]
 }
 
 // Here is the test for sum(); uncomment it to run it
 
-// testSum(4, 7);
+testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -28,13 +28,13 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function multiply(a, b,c) { //eslint-disable-line
-  let result=a*b*c;
+function multiply(a, b) { //eslint-disable-line
+  let result=a*b;
   return [result,`The product of ${a} and ${b} is ${result}.`]
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(4,7);
+testMultiply(4,7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -50,12 +50,12 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sumAndMultiply(a, b,c) { //eslint-disable-line
-let result1=sum(4,7,5);
-let result2=multiply(4,7,5);
-  return [sum(4,7,5)[0],multiply(4,7,5)[0],`4 and 7 and 5 sum to ${sum(4,7,5)[0]}.`,`The product of 4 and 7 and 5 is ${multiply(4,7,5)[0]}.`]
+function sumAndMultiply(a,b) { //eslint-disable-line
+let result1=sum((sum(4,7)[0]),5)[0];
+let result2=multiply((multiply(4,7)[0]),5)[0];
+  return [result1,result2,`4 and 7 and 5 sum to ${result1}.`,`The product of 4 and 7 and 5 is ${result2}.`]
 }
-// console.log(sumAndMultiply(4, 7,5));
+
 // Here is the test for sumAndMultiply(); uncomment it to run it
 testSumAndMultiply(4,7,5);
 
@@ -75,10 +75,10 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-let result=sum(testArray[0],testArray[1],testArray[2])[0];
+let result=sum(sum(testArray[0],testArray[1])[0],testArray[2])[0];
 return[result,`${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${result} is their sum.`]
 }
-console.log(sumArray());
+
 // Here is the test for sumArray(); uncomment it to run it
 
 testSumArray(testArray);
@@ -97,7 +97,8 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-return[multiply(testArray[0],testArray[1],testArray[2])[0],`The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${multiply(testArray[0],testArray[1],testArray[2])[0]}.`]
+let result=multiply(multiply(testArray[0],testArray[1])[0],testArray[2])[0];
+  return[result,`The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${result}.`]
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
