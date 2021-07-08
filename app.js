@@ -84,7 +84,7 @@ function sumArray(sumArr) { //eslint-disable-line
   let sumarraynum =sum(sum(testArray[0],testArray[1])[0],testArray[2])[0];
 
   // console.log(sumarraynum);
-  
+  //fdk
  
   return[sumarraynum,`${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${sumarraynum} is their sum.`]
 }
