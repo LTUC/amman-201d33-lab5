@@ -107,6 +107,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 let testArray2 = [2, 3, 4]; 
 
+
 function multiplyArray([a,b,c]) { 
 let x = multiply(a,b)[0];
 let y = multiply(x,c)[0];
