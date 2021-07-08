@@ -81,14 +81,14 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
 
-// function sumArray(sumArr) { 
+function sumArray(sumArr) { 
 
-//   let sum2=sum(testArray[0],testArray[1])[0];
-//   sum2=sum(sum2,testArray[2])[0];
+  let sum2=sum(testArray[0],testArray[1])[0];
+  sum2=sum(sum2,testArray[2])[0];
 
-//   return[sum2,"2,3,4 was passed in as an array of numbers, and 9 is their sum."]
-// }
-// testSumArray(2,3,4);
+  return[sum2,"2,3,4 was passed in as an array of numbers, and 9 is their sum."]
+}
+testSumArray(2,3,4);
 
 // Here is the test for sumArray(); uncomment it to run it
 
