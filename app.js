@@ -114,6 +114,9 @@ jj=multiply(jj,multArr[j])[0];
 console.log(`here `,multArr[j]);
 
 
+
+
+
 }
 console.log(jj);
 
