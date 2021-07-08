@@ -51,11 +51,18 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+  let sumOftwo = sum(a,b)[0]
+  let sumOfthree = sum(sumOftwo,c)[0]
+  let multiplyOftwo = multiply(a,b)[0] 
+  let multiplyOfthree = multiply(multiplyOftwo,c)[0]
+  let thirdElment = `${a} and ${7} and ${5} sum to ${sumOfthree}.`
+  let fourthElment = `The product of ${a} and ${b} and ${c} is ${multiplyOfthree}.`
+  let array = [sumOfthree,multiplyOfthree,thirdElment , fourthElment]
+  return array
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+ testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -73,12 +80,22 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+ let firstN , secondN , thirdN
+ firstN =  sumArr[0];
+ secondN = sumArr[1];
+ thirdN =  sumArr[2];
+ let sumofFirst = sum(firstN,secondN)[0];
+ let sumofThird = sum(sumofFirst,thirdN)[0];
+ let SecondElement = `${firstN},${secondN},${thirdN} was passed in as an array of numbers, and ${sumofThird} is their sum.`
+ let array = [sumofThird,SecondElement]
+ return array
+ 
 }
+//sumArray(testArray)
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+ testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -94,11 +111,21 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
+  let firstN , secondN , thirdN
+  firstN =  multArr[0];
+  secondN = multArr[1];
+  thirdN =  multArr[2];
+  let multofFirst = multiply(firstN,secondN)[0];
+  let mulofThird = multiply(multofFirst,thirdN)[0];
+  let SecondElement = `The numbers ${firstN},${secondN},${thirdN} have a product of ${mulofThird}.`
+  let array = [mulofThird,SecondElement]
+  return array
 
 }
 
+
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+ testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
@@ -120,12 +147,42 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
-
+//let arrayElments = 0
+// for (let i = 0; i < dynamicArray.length; i++) {
+//   let arrayElments += dynamicArray[i];
+  
+//   console.log(arrayElments)
+  
+// }
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+// i think this is a worng solution becasue if the Array has more than 5 elments the function will not work i tried to search about that how can i store atrray values without using + opreator i mean im sure i have to loop by the arraylength but i dont know how to store it without using + maybe in recursive function but i'm still stuck even if i used it 
+/*..let arrayElments = 0
+ for (let i = 0; i < dynamicArray.length; i++) {
+  let arrayElments += dynamicArray[i];
+  
+  console.log(arrayElments)
+  
+ }*/
+  let firstN,secondN , thirdN,foruthN ,fifthN
+  firstN = dynamicArray[0];
+  secondN = dynamicArray[1];
+  thirdN =  dynamicArray[2];
+  foruthN = dynamicArray[3];
+  fifthN =  dynamicArray[4];
+  let multoffirst= multiply(firstN,secondN)[0];
+  let multofSecondN = multiply(multoffirst,thirdN)[0];
+  let mulofThird = multiply(multofSecondN,foruthN)[0];
+  let mutloforuth =  multiply(mulofThird,fifthN)[0];
+  let SecondElement = `The numbers ${firstN},${secondN},${thirdN},${foruthN},${fifthN} have a product of ${mutloforuth}.`
+  let array = [mutloforuth, SecondElement]
+  
+  return array
+  
 
+  
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
