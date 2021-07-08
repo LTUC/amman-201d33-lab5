@@ -50,14 +50,15 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-let result2;
-function sumAndMultiply(a, b, c){ 
-let result=sum(sum(a,b)[0],c)[0];
-result2=multiply(multiply(a,b)[0],c)[0];
-  return [result,resul2,`The product of ${a} and ${b} and ${c} is ${result}.`]
-  
+
+function sumAndMultiply(a, b, c) {
   //eslint-disable-line
- }
+  let result=sum(a,b,c)[0];
+  result=sum(result,c)[0];
+  let result2=multiply(a,b,c)[0];
+  result2=multiply(result2,c)[0];
+  return[result,result2,`${a} and ${b} and ${c} sum to ${result}.`,`The product of ${a} and ${b} and ${c} is ${result2}.`];
+}
 testSumAndMultiply(4,7,5);
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
