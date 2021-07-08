@@ -99,9 +99,14 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
+let result5;
 function multiplyArray(multArr) { //eslint-disable-line
-
+result5=multArr[0];
+for (let j=1; j<multArr.length ; j++)
+result5=multiply(result5,multArr[j])[0];
+  return[result5,`The numbers ${multArr} have a product of ${result5}.`]
 }
+testMultiplyArray(testArray);
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(testArray);
