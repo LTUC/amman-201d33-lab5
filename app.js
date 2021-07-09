@@ -97,7 +97,7 @@ counter=sum(counter,sumArr[i])[0];
 
   // console.log(test);
 
-  return [counter,`2,3,4 was passed in as an array of numbers, and 9 is their sum.`]
+  return [counter,`${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${counter} is their sum.`]
 
 
 }
@@ -123,10 +123,15 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
 
+  let product=1;
+  for (let j=0 ; j<testArray.length ;j++){
+  product= multiply(product,testArray[j])[0];
+  } 
+  return[product,`The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${product}.`]
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
@@ -149,9 +154,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
-function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
-}
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyAnyArray(testDynamicArray);
