@@ -57,7 +57,7 @@ function sumAndMultiply(a, b, c) {
 let totalsum=sum(sum(a, b)[0], c)[0]
 let total_multiplication=multiply(multiply(a, b)[0], c)[0]
 
-return [totalsum,total_multiplication,"4 and 7 and 5 sum to 16.","The product of 4 and 7 and 5 is 140."]
+return [totalsum,total_multiplication,`${a} and ${b} and ${c} sum to 16.`,`The product of ${a} and ${b} and ${c} is 140.`]
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -75,18 +75,23 @@ where the first element is the sum of the numbers in the array,
 
 "2,3,4 was passed in as an array of numbers, and 9 is their sum."
 
-IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To do addition, use your sum() function that you've already created. You're going to have to be resourceful to figure out how to do this. However, you may continue to use the + operator for string concatenation.
+IMPORTANT DETAIL: You may not use the arithmetic operator + in this function.
+ To do addition, use your sum() function that you've already created.
+  You're going to have to be resourceful to figure out how to do this.
+   However, you may continue to use the + operator for string concatenation.
 
-Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
+Test this function by hand in the console to get it working, 
+and when you think it is finished, uncomment the call for the testSumArray() 
+function and see if the test passes.*/
 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
-function sumArray(sumArr) 
-{ //eslint-disable-line
-  let result=sum(2,3)[0];
-  let finalResult=sum(result,testArray[2])[0];
-  return [finalResult,'2,3,4 was passed in as an array of numbers, and 9 is their sum.'];
-}
+function sumArray(sumArr) { //eslint-disable-line
+
+  let total= sum(testArray[0],testArray[1])[0];
+  total = sum(total,testArray[2])[0];
+  return[total, `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${total} is their sum.`]
+  }
 
 // Here is the test for sumArray(); uncomment it to run it
 
@@ -110,10 +115,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 let secondArray = [2, 3, 4]; //eslint-disable-line
-function multiplyArray(multArr) { 
-  let result=multiply(2,3)[0];
-  let finalResult=multiply(result,secondArray[2])[0];
-  return [finalResult,'The numbers 2,3,4 have a product of 24.'];
+function multiplyArray(multArr) { //eslint-disable-line
+
+  let total= multiply(testArray[0],testArray[1])[0];
+  total = multiply(total,testArray[2])[0];
+  return[total, `The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${total}.`]
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
