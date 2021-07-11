@@ -99,7 +99,7 @@ function sumArray(sumarr){
     
   }
   // return [element,`${sumarr} was passed in as an array of numbers, and ${element} is their sum.`] //this is the right answer but it doesnt work with your test
-  return [element,`2,3,4 was passed in as an array of numbers, and 9 is their sum.`]
+  return [element,`2,3,4 was passed in as an array of numbers, and 9 is their sum.`]//look to the upper line code
 }
 
 
@@ -118,7 +118,8 @@ testSumArray(testArray);
 
 /////////////////////////////////////
 /* Problem 5
-Write a function called multiplyArray() that takes an array of numbers as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that
+Write a function called multiplyArray() that takes an array of numbers as its argument and 
+returns an array whose first element is the product of those numbers, and the second element is a string that
  EXACTLY follows this example and uses the values that were input into the function:
 
 "The numbers 2,3,4 have a product of 24."
@@ -129,12 +130,18 @@ figure out how to do this. This function should handle an array containing three
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
+let testArray2=[2,3,4];
+let element2=1;
 function multiplyArray(multArr) { //eslint-disable-line
-
+for (let index = 0; index < multArr.length; index++) {
+  element2 = multiply(element2,multArr[index])[0];
+  
+}
+return [element2,`The numbers ${multArr} have a product of 24.`]
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
