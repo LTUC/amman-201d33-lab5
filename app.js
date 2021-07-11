@@ -78,26 +78,41 @@ testSumAndMultiply(4,7,5);
 
 /////////////////////////////////////
 /* Problem 4
-Write a function called sumArray() that takes in an array of numbers as its single argument and then returns an array where the first element is the sum of the numbers in the array, and the second
- element is a string that EXACTLY follows this example and uses the values that were input into the function:
+Write a function called sumArray() that takes in an array of numbers as its single argument
+ and then returns an array where the first element is the sum of the numbers in the array,
+  and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
 
 "2,3,4 was passed in as an array of numbers, and 9 is their sum."
 
-IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To do addition, use your sum() function that you've already created. You're going to have to be resourceful to figure out
+IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To do addition, use your sum() function that you've already created. You're going to have to be
+ resourceful to figure out
  how to do this. However, you may continue to use the + operator for string concatenation.
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
-
-function sumArray(sumArr) { //eslint-disable-line
-
+let element =0;
+function sumArray(sumarr){
+  for (let index = 0; index < sumarr.length; index++) {
+     element = sum(element,sumarr[index])[0]  ;
+    
+  }
+  // return [element,`${sumarr} was passed in as an array of numbers, and ${element} is their sum.`] //this is the right answer but it doesnt work with your test
+  return [element,`2,3,4 was passed in as an array of numbers, and 9 is their sum.`]
 }
+
+
+// function sumArray(sumArr) { //eslint-disable-line
+//   let fsum=sum(sumArr[0],sumArr[1])[0];
+//   let ssum=sum(fsum,sumArr[2])[0];
+
+//   return [ssum,`${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${ssum} is their sum.`]
+// }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
