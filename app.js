@@ -7,15 +7,19 @@ Write a function called sum() that takes in two numbers as arguments and then re
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
+let a =4;
+let b = 7;
+let c= 5;
+let g=[a,b]
 // Write your code here
 function sum(a, b) { //eslint-disable-line
-  let result=a+b;
-  return [result,`The sum of ${a} and ${b} is ${result}.`]
+  let result = a + b;
+  return [result, `The sum of ${a} and ${b} is ${result}.`]
 }
 
 // Here is the test for sum(); uncomment it to run it
 
-testSum(4, 7);
+testSum(g);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -29,12 +33,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-  let result=a*b;
-  return [result,`The product of ${a} and ${b} is ${result}.`]
+  let result = a * b;
+  return [result, `The product of ${a} and ${b} is ${result}.`]
 }
 
 // Here is the test for multiply(); uncomment it to run it
-testMultiply(5,9);
+testMultiply(a, b);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -50,17 +54,18 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sumAndMultiply(a, b, c) { 
 
-  let total=sum(a,b)[0];
-  total = sum(total,c)[0]
+function sumAndMultiply(a, b, c) {
 
-  let product=multiply(a,b)[0];
-  product=multiply(product,c)[0];
+  let total = sum(a, b)[0];
+  total = sum(total, c)[0]
 
-  return[total,product, "4 and 7 and 5 sum to 16.","The product of 4 and 7 and 5 is 140." ];
+  let product = multiply(a, b)[0];
+  product = multiply(product, c)[0];
+
+  return [total, product, "4 and 7 and 5 sum to 16.", "The product of 4 and 7 and 5 is 140."];
 }
-testSumAndMultiply(4,7,5);
+testSumAndMultiply(a, b, c);
 
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -79,21 +84,25 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
-let testArray = [2, 3, 4]; //eslint-disable-line
+ //eslint-disable-line
+let hight = 2
+let width = 3 
+let depth = 4
+let testArray = [hight, width, depth];
 
 function sumArray(sumArr) {
-   
 
-  let sum2=sum(  testArray[0],  testArray[1]) [0] ;
-  sum2=sum(  sum2,  testArray[2])[0];
 
-  return[sum2,"2,3,4 was passed in as an array of numbers, and 9 is their sum."]
+  let sum2 = sum(testArray[0], testArray[1])[0];
+  sum2 = sum(sum2, testArray[2])[0];
+
+  return [sum2, "2,3,4 was passed in as an array of numbers, and 9 is their sum."]
 }
-testSumArray(2,3,4);
+// testSumArray(hight, width, depth);
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -108,16 +117,16 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-let multiArray=[2,3,4];  
+let multiArray = [hight, width, depth];
 
 
-function multiplyArray(multArr) { 
-  let multiply2=multiply(  multiArray[0],  multiArray[1])  [0];
-  multiply2=multiply(  multiply2 ,multiArray[2]) [0];
-  return[multiply2,"The numbers 2,3,4 have a product of 24."]
+function multiplyArray() {
+  let multiply2 = multiply(multiArray[0], multiArray[1])[0];
+  multiply2 = multiply(multiply2, multiArray[2])[0];
+  return [multiply2, "The numbers 2,3,4 have a product of 24."]
 }
 
-testMultiplyArray(2,3,4);
+testMultiplyArray(multiArray);
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(testArray);
@@ -141,7 +150,7 @@ This function should be dynamic, accepting an array of any length.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // Write your code here
-let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
+let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
